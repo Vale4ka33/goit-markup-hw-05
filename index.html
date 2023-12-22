@@ -465,9 +465,8 @@
         </div>
         <div class="footer-subscribe">
           <p class="footer-subscribe-text">Subscribe</p>
-          <div class="input-subscribe-container">
-            <form class="form-footer-subscribe">
-              <label for="subscribe-social"></label>
+          <form class="form-footer-subscribe">
+            <label for="subscribe-social">
               <input
                 class="form-input-subscribe"
                 type="email"
@@ -475,19 +474,19 @@
                 id="subscribe-social"
                 placeholder="E-mail"
               />
-              <button class="subscribe-social-btn" type="submit">
-                Subscribe
-                <svg class="subscribe-social-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-telega"></use>
-                </svg>
-              </button>
-            </form>
-          </div>
+            </label>
+            <button class="subscribe-social-btn" type="submit">
+              Subscribe
+              <svg class="subscribe-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-telega"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
     <!-- Modal window is-open-->
-    <div class="backdrop">
+    <div class="backdrop is-open">
       <div class="modal">
         <button class="modal-btn" type="button" aria-label="modal close-button">
           <svg class="modal-btn-icon" width="8" height="8">
@@ -532,22 +531,23 @@
               <use href="./images/icons.svg#icon-email"></use>
             </svg>
           </div>
-          <label class="form-label" for="comment-text">Comment</label>
+          <label class="form-label-comment" for="comment-text">Comment</label>
           <textarea
+            class="form-label-text"
             name="comment-text"
             id="comment-text"
-            rows="5"
+            rows="4"
             placeholder="Text input"
           ></textarea>
-          <div class="span">
+          <div class="">
             <input
-              class="form-input"
+              class="form-input-textarea"
               type="checkbox"
               name="accept-conditions"
             />
             <p class="accept-text">
               I accept the terms and conditions of the
-              <span class="accept-text-color">Privacy Policy</span>
+              <a class="accept-text-link" href="">Privacy Policy</a>
             </p>
           </div>
           <button class="btn-send" type="submit">Send</button>
