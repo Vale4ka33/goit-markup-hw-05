@@ -25,7 +25,6 @@ img{
 }
 input{
     outline: none;
-    width: 100%;
 }
 /* Reset */
 h1, 
@@ -487,8 +486,15 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
 
     border-radius: 4px;
     background: #4D5AE5;
-    border: none
+    border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
 }
+
+.subscribe-social-btn:hover,
+.subscribe-social-btn:focus{
+    background-color: #404BBF;
+}
+
 .subscribe-social-icon{
     fill: #FFFFFF;
 }
@@ -513,7 +519,7 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
     visibility: hidden;
     pointer-events: none;
 
-    /* transition: opacity 300ms; */
+    
 }
 .backdrop.is-open{
     opacity: 1;
@@ -548,7 +554,14 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
     justify-content: center;
     background-color: #e7e9fc;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+}
+
+.modal-btn:hover,
+.modal-btn:focus{
+    background-color: #404bbf;
+    fill: #ffffff;
 }
 .modal-info{
     color: #2E2F42;
@@ -600,15 +613,19 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
 }
 .form-input:focus,
 .form-label-text:focus{
-    border: 1px solid var(--IRIS, #4D5AE5);
+    border: 1px solid #4D5AE5;
 }
 .input-icon{
     position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+input:focus+svg {
+    fill: #4d5ae5;
+}
  /* < !--Checkbox --> */
 .form-agreement{
     color: #8E8F99;
@@ -617,16 +634,34 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
     letter-spacing: 0.04em;
     display: block;
     margin-bottom: 24px;
+    user-select: none;
+    
 }
 .form-agreement-link{
     text-decoration-line: underline;
     color: #4D5AE5;
 }
 .form-agreement-checkbox{
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+
+    width: 16px;
+    height: 16px;
 
     border-radius: 4px;
     border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+}
+.form-agreement-icon{
+    opacity: 0;
+    fill: #FFF;
+}
+
+.checkbox-input:checked + .form-agreement-checkbox{
+    background-color: #404BBF;
+    border-color: #404BBF;
+}
+.checkbox-input:checked+.form-agreement-checkbox > .form-agreement-icon{
+    opacity: 1;
 }
