@@ -682,12 +682,11 @@ input:focus+svg {
     fill: #FFF;
 }
 
-.checkbox-input:checked + .form-agreement-checkbox{
+input:checked+label>span{
     background-color: #404bbf;
-    border-color: #404BBF;
     border: none;
     fill: #F4F4FD;
 }
-.checkbox-input:checked+.form-agreement-checkbox > .form-agreement-icon{
+input:checked+label>span>svg{
     opacity: 1;
 }
