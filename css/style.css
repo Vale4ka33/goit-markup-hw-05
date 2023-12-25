@@ -489,7 +489,7 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
     border-radius: 4px;
     background: #4D5AE5;
     border: none;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-social-btn:hover,
@@ -625,6 +625,7 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 4px;
     border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
     width: 100%;
+    font-size: 12px;
     height: 40px;
     padding-left: 38px;
     background-color: transparent;
@@ -651,6 +652,10 @@ input:focus+svg {
  .checkbox-container{
     margin-bottom: 24px;
  }
+
+ .checkbox-input:focus+.form-agreement>.form-agreement-checkbox{
+    border-color: #4D5AE5;
+ }
 .form-agreement{
     color: #8E8F99;
     font-size: 12px;
@@ -673,6 +678,7 @@ input:focus+svg {
     border-radius: 2px;
     width: 16px;
     height: 16px;
+    margin-right: 8px;
     fill: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(46, 47, 66, 0.4);
